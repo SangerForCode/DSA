@@ -2,28 +2,26 @@
 using namespace std;
 
 void solve() {
-    int j;
-    cin>>j;
-    int solution=0;
-    vector<int> arr;
-    for (int i = 0; i < j; i++)
+    int n;
+    cin>>n;
+    int xr=0;
+    for (int i = 0; i < n;  i++)
     {
-        // cin>>arr[i];
-        int k;
-        cin>>k;
-        arr.push_back(k);
+        int x;
+        cin>>x;
+        xr^=x;
     }
-    for (int i = 0; i <= ((j)/2); i++)
-    {
-        if(arr[i]!=arr[j-i-1]){
-            solution++;
+    if(n%2==1){
+        cout<< xr<< endl;
+    }
+    else{
+        if(xr==0){
+            cout<<0<<endl;
         }
         else{
-            continue;
+            cout<<-1<<endl;
         }
     }
-    cout<< solution<<endl;
-    
 }
 
 int main() {
