@@ -17,6 +17,7 @@ void solve() {
     for(auto c:p){
         cout << c.first << " "<< c.second << endl;
     }
+    cout << endl;
 }
 
 int main() {
